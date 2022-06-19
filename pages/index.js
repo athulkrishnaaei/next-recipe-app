@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { sanityClient,urlFor } from '../lib/sanity'
+import Image from 'next/image';
 
 const recipeQuery = `*[_type == "recipe"]{
   _id,
@@ -14,12 +15,12 @@ export default function Home({ recipes}) {
   return (
     <div >
       <Head>
-        <title>Athul's Kitchen</title>
+        <title>Athuls Kitchen</title>
         <meta name="description" content="Create Next App" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <h1>Welcome to Athul's Kitchen</h1>
+        <h1>Welcome to Athuls Kitchen</h1>
 
         <ul className="recipes-list">
 
@@ -31,7 +32,7 @@ export default function Home({ recipes}) {
 
             <a>
           
-              <img  src={urlFor(recipe.mainImage).url()} alt={recipe.name}/>
+              <Image  src={urlFor(recipe.mainImage).url()} alt={recipe.name}/>
 
               <span>{recipe.name}</span>
 

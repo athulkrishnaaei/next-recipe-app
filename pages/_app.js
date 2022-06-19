@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       <div className='header'>
 
         <Link href ="/about">
-          <a>Athul's Kitchen</a>
+          <a>Athuls Kitchen</a>
         
         </Link>
       </div>
